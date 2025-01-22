@@ -1,2 +1,3 @@
 #podstawy-informatyki
-hjbhhbjh
+Piotr Kramek 1a
+
