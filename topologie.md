@@ -42,6 +42,14 @@
 1. **Punkt-punkt (Point-to-Point)**  
    **Opis**
    - Łącze bezpośrednie między dwoma urządzeniami.
+
+   **Zalety**
+   - Sieć point-to-point jest łatwa do skonfigurowania, ponieważ łączy tylko dwa urządzenia. Nie ma potrzeby tworzenia skomplikowanej infrastruktury sieciowej.
+   - Ze względu na bezpośrednią łączność między urządzeniami, opóźnienia są minimalne.
+
+   **Wady**
+   - Sieć point-to-point wymaga stabilnych i niezawodnych połączeń między urządzeniami. Jeśli występują problemy z linią, komunikacja jest zakłócona.
+   - W przypadku awarii jednego z urządzeń lub łącza, cała komunikacja między tymi punktami zostaje przerwana. Brak redundancji może prowadzić do problemów w dostępności.
    
    **Zastosowanie**
    - Wykorzystywana w łączach WAN, np. pomiędzy dwoma oddziałami firmy.
@@ -50,6 +58,14 @@
    **Opis**
    - Token (specjalny pakiet) krąży po sieci, a urządzenie może wysłać dane tylko wtedy, gdy posiada token.
    
+   **Zalety**
+   - Kolizje w sieci są znacznie ograniczone, ponieważ token jest przekazywany w określonym porządku, co zapewnia, że tylko jedno urządzenie w danym czasie korzysta z medium transmisyjnego.
+   - Sieć może być łatwo rozszerzana o nowe urządzenia, a token jest przekazywany do nowych urządzeń w sposób uporządkowany, co nie wpływa na jakość komunikacji w sieci.
+
+   **Wady**
+   - W sieci z dużą liczbą urządzeń czas oczekiwania na dostęp do medium może stać się znacznie dłuższy, co wpływa na efektywność komunikacji
+   - Jeśli jedno z urządzeń lub połączeń w sieci ulegnie awarii, może to zakłócić przepływ tokena, co prowadzi do spadku wydajności sieci.
+
    **Zastosowanie**
    - Typowe w sieciach Token Ring, ale także w niektórych protokołach Ethernet.
 
@@ -57,5 +73,13 @@
    **Opis**
    - Więcej niż jedno urządzenie może jednocześnie wysyłać dane, przy czym sieć rozwiązuje konflikty dotyczące dostępu do medium.
     
-    **Zastosowanie** 
+    **Zalety**
+    - Umożliwia wielu użytkownikom jednoczesny dostęp do sieci, co jest podstawą dla rozwoju dużych sieci komórkowych, takich jak 4G, 5G czy sieci Wi-Fi.
+    - W miarę rozwoju sieci, w systemach opartych na Multiple Access można łatwo dodawać nowych użytkowników bez konieczności dużych zmian w infrastrukturze. To sprawia, że sieci mogą rosnąć w miarę potrzeb.
+   
+    **Wady**
+    - W zatłoczonych sieciach może wystąpić zmienna jakość transmisji, opóźnienia i utrata pakietów.
+    - W systemach takich jak CSMA, gdzie urządzenia konkurują o dostęp do medium, mogą występować kolizje, co prowadzi do konieczności retransmisji i opóźnień w transmisji danych. Może to obniżyć wydajność w zatłoczonych sieciach.
+
+**Zastosowanie** 
    - Stosowana w sieciach Ethernet i Wi-Fi, gdzie urządzenia muszą radzić sobie z dostępem do wspólnego medium transmisyjnego.
